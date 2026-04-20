@@ -1,7 +1,7 @@
 // Adatkép service worker — minimal offline shell
 // Caches the homepage + critical assets on install, serves from cache when offline.
 
-const CACHE = 'adatkep-v4';
+const CACHE = 'adatkep-v5';
 const PRECACHE = [
   '/',
   '/osszes.html',
@@ -9,6 +9,8 @@ const PRECACHE = [
   '/assets/style.css',
   '/assets/app.js',
   '/assets/icon.svg',
+  '/assets/icon-192.png',
+  '/assets/icon-512.png',
   '/manifest.json'
 ];
 

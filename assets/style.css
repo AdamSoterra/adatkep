@@ -589,12 +589,83 @@ p { margin: 0 0 16px; }
 
 /* ----- Responsive ------------------------------------------------------ */
 @media (max-width: 720px) {
-  .section { padding: 56px 0; }
-  .section--hero { padding: 80px 0 56px; }
+  .container { padding: 0 20px; }
+  .site-header__inner { padding: 12px 20px; }
+  .section { padding: 48px 0; }
+  .section--hero { padding: 64px 0 40px; }
+  .section--tight { padding: 32px 0; }
   .nav { gap: 16px; }
   .nav a { font-size: 11px; }
-  .featured { grid-template-columns: 1fr; padding: 32px; }
-  .site-footer__row { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Wordmark + hero scaling */
+  .wordmark--md { font-size: 26px; }
+  .hero { padding: 48px 0 32px; }
+  .hero h1 { margin-bottom: 16px; }
+  h1 { font-size: clamp(36px, 11vw, 56px); letter-spacing: -0.03em; }
+  h2 { font-size: clamp(24px, 6.5vw, 32px); }
+  .lead { font-size: 17px; line-height: 1.55; }
+
+  /* Post (article) pages — the biggest spacing offender on mobile */
+  .post { padding: 32px 0 48px; }
+  .post__header { margin-bottom: 28px; }
+  .post__title {
+    font-size: clamp(26px, 7.5vw, 40px);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    /* break long compound words cleanly instead of overflowing */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .post__meta { font-size: 11px; }
+  .post__body p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; }
+  .post__body h2 { margin-top: 32px; }
+  .post__body h3 { margin-top: 24px; }
+  .callout { padding: 16px 18px; font-size: 15px; margin: 24px 0; }
+
+  /* Charts need much tighter gutters on mobile */
+  .chart { padding: 20px 16px; margin: 24px 0; }
+  .chart__head { gap: 10px; margin-bottom: 16px; }
+  .chart__title { font-size: 15px; line-height: 1.3; }
+  .chart__sub { font-size: 10px; }
+  .chart__tag { font-size: 9px; padding: 3px 8px; }
+  .chart__source { font-size: 10px; margin-top: 16px; padding-top: 12px; flex-wrap: wrap; gap: 6px; }
+  .bar-row { grid-template-columns: 72px 1fr 54px; gap: 8px; font-size: 12px; margin-bottom: 10px; }
+  .bar-label, .bar-val { font-size: 11px; }
+  .bar-track { height: 20px; }
+
+  .chart-wrap { margin: 24px 0; }
+  .download-btn { font-size: 10px; padding: 6px 12px; margin-top: 8px; }
+
+  /* Cards + featured */
+  .featured { grid-template-columns: 1fr; padding: 28px 22px; gap: 24px; }
+  .featured__title { font-size: 24px; }
+  .featured__visual { padding: 20px; }
+  .post-grid { gap: 16px; grid-template-columns: 1fr; }
   .post-card__visual { aspect-ratio: 1.6; padding: 16px; }
-  .bar-row { grid-template-columns: 80px 1fr 64px; gap: 10px; }
+  .post-card__body { padding: 16px 18px 18px; }
+  .post-card__title { font-size: 16px; }
+
+  /* Footer */
+  .site-footer { padding: 40px 0 28px; margin-top: 48px; }
+  .site-footer__row { grid-template-columns: 1fr; gap: 28px; margin-bottom: 32px; }
+
+  /* Share row */
+  .share-row { flex-wrap: wrap; margin-top: 32px; padding-top: 24px; }
+  .share-row a { font-size: 11px; padding: 6px 12px; }
+
+  /* Filter bar on /osszes */
+  .filter-bar { gap: 6px; margin-bottom: 24px; padding-bottom: 14px; }
+  .filter-pill { font-size: 11px; padding: 6px 11px; }
+}
+
+@media (max-width: 380px) {
+  .container { padding: 0 16px; }
+  .site-header__inner { padding: 10px 16px; }
+  .wordmark--md { font-size: 22px; }
+  .nav { gap: 12px; }
+  .nav a { font-size: 10px; letter-spacing: 0.08em; }
+  .post__title { font-size: clamp(22px, 7vw, 30px); }
+  .bar-row { grid-template-columns: 60px 1fr 48px; gap: 6px; }
 }
