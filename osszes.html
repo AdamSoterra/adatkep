@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adatkép — független adatvizualizáció Magyarországról és Közép-Európáról</title>
-  <meta name="description" content="Független, pártatlan adatvizualizáció Magyarországról és Közép-Európáról. Számok és tények — minden poszt egy adatkép.">
+  <title>Összes adatkép · Adatkép</title>
+  <meta name="description" content="Az Adatkép összes adatvizualizációja egy helyen. Szűrj kategóriánként: egészségügy, oktatás, közélet, demográfia, lakhatás, gazdaság, sport.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Adatkép — független adatvizualizáció Magyarországról és CEE-ről">
-  <meta property="og:description" content="Számok és tények — minden poszt egy adatkép.">
+  <meta property="og:title" content="Összes adatkép · Adatkép">
+  <meta property="og:description" content="Minden Adatkép adatvizualizáció — kategóriánként szűrhető.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://adatkep.hu">
+  <meta property="og:url" content="https://adatkep.hu/osszes.html">
   <meta property="og:locale" content="hu_HU">
 
-  <!-- PWA -->
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0F8B8D">
   <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
@@ -23,7 +21,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="/" class="wordmark wordmark--md">adat<span class="accent">kép</span></a>
@@ -34,82 +31,31 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <section class="section section--hero">
     <div class="container">
-      <div class="eyebrow eyebrow--accent">Magyarország · Közép-Európa · 2026</div>
-      <h1>adat<span style="color: var(--accent);">kép</span></h1>
-      <p class="lead">
-        Független, pártatlan adatvizualizáció Magyarországról és Közép-Európáról.
-        Számok és tények — minden poszt egy adatkép.
-      </p>
+      <div class="eyebrow">Összes adatkép</div>
+      <h1 style="font-size: clamp(40px, 6vw, 64px);">Minden szám, minden téma</h1>
+      <p class="lead">7 tartalmi pillér. Szűrj kategóriánként, vagy nézd végig az összeset.</p>
     </div>
   </section>
 
-  <!-- Featured -->
-  <section class="section section--tight">
+  <section class="section" style="padding-top: 0;">
     <div class="container">
-      <div class="eyebrow">Kiemelt</div>
-      <article class="featured">
-        <div class="featured__body">
-          <div class="featured__cat">Sport</div>
-          <h2 class="featured__title">
-            <a href="/adatkep/olimpiai-aranyak-per-fo.html">Magyarország a világ #1-e olimpiai aranyak fő/lakos arányban</a>
-          </h2>
-          <p class="featured__excerpt">
-            178 olimpiai arany és 9,6 millió lakos: minden 1 millió főre 19,4 arany.
-            Egyetlen másik 1 millió fő feletti ország sem közelíti meg.
-          </p>
-          <div class="post__meta">2026.04.20 · Forrás: Olympedia · 3 perc olvasás</div>
-        </div>
-        <div class="featured__visual">
-          <div class="chart" style="margin: 0; border: none; padding: 0; background: transparent;">
-            <div class="chart__head" style="margin-bottom: 16px;">
-              <div>
-                <div class="chart__title" style="font-size: 14px; color: var(--ink);">Olimpiai aranyak / millió fő</div>
-                <div class="chart__sub">top 5 · 1896–2024</div>
-              </div>
-            </div>
-            <div class="bar-row" style="grid-template-columns: 88px 1fr 44px; font-size: 11px;">
-              <div class="bar-label">Magyarország</div>
-              <div class="bar-track" style="height: 18px;"><div class="bar-fill" style="width: 100%;"></div></div>
-              <div class="bar-val" style="font-size: 11px;">19,4</div>
-            </div>
-            <div class="bar-row" style="grid-template-columns: 88px 1fr 44px; font-size: 11px;">
-              <div class="bar-label">Finnország</div>
-              <div class="bar-track" style="height: 18px;"><div class="bar-fill" style="width: 88%;"></div></div>
-              <div class="bar-val" style="font-size: 11px;">17,1</div>
-            </div>
-            <div class="bar-row" style="grid-template-columns: 88px 1fr 44px; font-size: 11px;">
-              <div class="bar-label">Svédország</div>
-              <div class="bar-track" style="height: 18px;"><div class="bar-fill" style="width: 53%;"></div></div>
-              <div class="bar-val" style="font-size: 11px;">10,2</div>
-            </div>
-            <div class="bar-row" style="grid-template-columns: 88px 1fr 44px; font-size: 11px;">
-              <div class="bar-label">Ausztrália</div>
-              <div class="bar-track" style="height: 18px;"><div class="bar-fill" style="width: 32%;"></div></div>
-              <div class="bar-val" style="font-size: 11px;">6,2</div>
-            </div>
-            <div class="bar-row" style="grid-template-columns: 88px 1fr 44px; font-size: 11px;">
-              <div class="bar-label">USA</div>
-              <div class="bar-track" style="height: 18px;"><div class="bar-fill" style="width: 17%;"></div></div>
-              <div class="bar-val" style="font-size: 11px;">3,3</div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <!-- Recent posts -->
-  <section class="section">
-    <div class="container">
-      <div class="eyebrow">Friss adatképek</div>
-      <h2 style="margin-bottom: 32px;">Mit mondanak a számok?</h2>
+      <div class="filter-bar">
+        <button class="filter-pill active" data-filter="all">Mind <span class="filter-count">6</span></button>
+        <button class="filter-pill" data-filter="egeszsegugy">Egészségügy <span class="filter-count">1</span></button>
+        <button class="filter-pill" data-filter="oktatas">Oktatás <span class="filter-count">1</span></button>
+        <button class="filter-pill" data-filter="kozelet">Közélet <span class="filter-count">1</span></button>
+        <button class="filter-pill" data-filter="demografia">Demográfia <span class="filter-count">0</span></button>
+        <button class="filter-pill" data-filter="lakhatas">Lakhatás <span class="filter-count">1</span></button>
+        <button class="filter-pill" data-filter="gazdasag">Gazdaság <span class="filter-count">0</span></button>
+        <button class="filter-pill" data-filter="sport">Sport <span class="filter-count">2</span></button>
+      </div>
 
-      <div class="post-grid">
+      <div class="post-grid filterable" id="filter-grid">
 
-        <a class="post-card" href="/adatkep/sajtoszabadsag.html">
+        <a class="post-card" href="/adatkep/sajtoszabadsag.html" data-category="kozelet">
           <div class="post-card__visual">
             <div style="font-family: var(--font-mono); font-size: 56px; font-weight: 700; letter-spacing: -0.06em; color: var(--ink);">
               40<span style="font-size: 0.5em; color: var(--accent); font-weight: 500; margin: 0 4px;">→</span>85
@@ -128,7 +74,7 @@
           </div>
         </a>
 
-        <a class="post-card" href="/adatkep/magyar-sakk.html">
+        <a class="post-card" href="/adatkep/magyar-sakk.html" data-category="sport">
           <div class="post-card__visual">
             <div style="font-family: var(--font-mono); font-size: 64px; font-weight: 700; letter-spacing: -0.06em; color: var(--ink);">
               6<span style="font-size: 0.35em; color: var(--accent); font-weight: 500; margin-left: 6px;">arany</span>
@@ -147,7 +93,7 @@
           </div>
         </a>
 
-        <a class="post-card" href="/adatkep/lakasar-ber.html">
+        <a class="post-card" href="/adatkep/lakasar-ber.html" data-category="lakhatas">
           <div class="post-card__visual">
             <div style="font-family: var(--font-mono); font-size: 64px; font-weight: 700; letter-spacing: -0.06em; color: var(--ink);">
               18<span style="font-size: 0.4em; color: var(--accent); font-weight: 500; margin-left: 4px;">év</span>
@@ -166,7 +112,7 @@
           </div>
         </a>
 
-        <a class="post-card" href="/adatkep/nobel-per-fo.html">
+        <a class="post-card" href="/adatkep/nobel-per-fo.html" data-category="oktatas">
           <div class="post-card__visual">
             <div style="font-family: var(--font-mono); font-size: 56px; font-weight: 700; letter-spacing: -0.06em; color: var(--ink);">
               13<span style="font-size: 0.4em; color: var(--accent); font-weight: 500; margin-left: 4px;">Nobel</span>
@@ -185,7 +131,7 @@
           </div>
         </a>
 
-        <a class="post-card" href="/adatkep/orvoshiany.html">
+        <a class="post-card" href="/adatkep/orvoshiany.html" data-category="egeszsegugy">
           <div class="post-card__visual">
             <div style="font-family: var(--font-mono); font-size: 64px; font-weight: 700; letter-spacing: -0.06em; color: var(--ink);">
               31<span style="font-size: 0.4em; color: var(--accent); font-weight: 500;">%</span>
@@ -204,7 +150,7 @@
           </div>
         </a>
 
-        <a class="post-card" href="/adatkep/olimpiai-aranyak-per-fo.html">
+        <a class="post-card" href="/adatkep/olimpiai-aranyak-per-fo.html" data-category="sport">
           <div class="post-card__visual">
             <div style="font-family: var(--font-mono); font-size: 64px; font-weight: 700; letter-spacing: -0.06em; color: var(--ink);">
               #1<span style="font-size: 0.3em; color: var(--accent); font-weight: 500; margin-left: 4px;">/fő</span>
@@ -225,32 +171,19 @@
 
       </div>
 
-      <div class="cta-row">
-        <a href="/osszes.html" class="btn btn--primary btn--lg">
-          Összes adatkép <span class="arrow">→</span>
-        </a>
+      <!-- Empty states (shown only when matching filter has zero posts) -->
+      <div class="filter-empty" data-empty-for="demografia" hidden>
+        <h3>Demográfia adatképek hamarosan</h3>
+        <p>Népességfogyás, születésszám, öregedés és diaszpóra — térképekkel és idősorokkal.</p>
       </div>
+      <div class="filter-empty" data-empty-for="gazdasag" hidden>
+        <h3>Gazdaság adatképek hamarosan</h3>
+        <p>Bérek (PPP-vel és nominal), infláció, GDP/fő, regionális összehasonlítások.</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- Mission -->
-  <section class="section">
-    <div class="container container--reading">
-      <div class="eyebrow">Mi az Adatkép?</div>
-      <h2>Itt vannak a számok. Te döntöd el, mit jelent.</h2>
-      <p class="lead">
-        A magyar közbeszédet két oldal pörgeti. Mi nem állunk egyiken sem.
-        Csak az adatokat mutatjuk — forrással, hivatkozással, hetente új grafikákkal.
-      </p>
-      <p style="margin-top: 24px;">
-        <a href="/rolunk.html" style="font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase;">
-          Tudj meg többet →
-        </a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__row">
@@ -263,7 +196,8 @@
         <div class="site-footer__col">
           <h4>Tartalom</h4>
           <ul>
-            <li><a href="/">Adatképek</a></li>
+            <li><a href="/">Friss</a></li>
+            <li><a href="/osszes.html">Összes adatkép</a></li>
             <li><a href="/rolunk.html">Rólunk</a></li>
           </ul>
         </div>

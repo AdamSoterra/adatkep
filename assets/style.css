@@ -396,43 +396,111 @@ p { margin: 0 0 16px; }
 .download-btn:disabled { opacity: 0.5; cursor: wait; }
 .download-btn::before { content: '↓'; font-size: 14px; line-height: 1; }
 
-/* ----- Archive page ---------------------------------------------------- */
-.archive-cat {
-  margin-top: 64px;
-}
-.archive-cat:first-of-type { margin-top: 32px; }
-.archive-cat__head {
+/* ----- Filter bar (osszes page) --------------------------------------- */
+.filter-bar {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--rule);
 }
-.archive-cat__title {
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  background: white;
   color: var(--ink);
+  border: 1px solid var(--rule);
+  padding: 8px 14px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
 }
-.archive-cat__count {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
+.filter-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
-.archive-empty {
-  font-family: var(--font-body);
-  font-size: 15px;
+.filter-pill.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.filter-pill.active .filter-count { color: rgba(247, 244, 238, 0.6); }
+.filter-pill[data-empty="true"] {
+  opacity: 0.5;
+}
+.filter-count {
+  font-size: 10px;
   color: var(--muted);
-  font-style: italic;
-  padding: 24px;
+  font-weight: 400;
+}
+
+.filter-empty {
   background: white;
   border: 1px dashed var(--rule);
   border-radius: var(--radius-md);
+  padding: 48px 32px;
   text-align: center;
+  margin-top: 24px;
+}
+.filter-empty h3 {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.filter-empty p {
+  color: var(--muted);
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+/* ----- CTA button (homepage "Összes" button) -------------------------- */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border: none;
+}
+.btn--primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn--primary:hover {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+.btn--lg {
+  font-size: 16px;
+  padding: 18px 32px;
+}
+.btn--md {
+  font-size: 14px;
+  padding: 14px 24px;
+}
+.btn .arrow {
+  transition: transform 0.15s ease;
+}
+.btn:hover .arrow {
+  transform: translateX(4px);
 }
 
 /* ----- Post (article) page --------------------------------------------- */

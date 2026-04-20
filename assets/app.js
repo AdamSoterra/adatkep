@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = year;
   });
 
+  // Category filters (osszes.html)
+  initCategoryFilters();
+
   // Chart download buttons
   document.querySelectorAll('[data-download-chart]').forEach((btn) => {
     btn.addEventListener('click', async (e) => {
@@ -49,6 +52,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+function initCategoryFilters() {
+  const pills = document.querySelectorAll('.filter-pill');
+  if (!pills.length) return;
+
+  // Mark pills with zero count as visually disabled
+  pills.forEach((pill) => {
+    const countEl = pill.querySelector('.filter-count');
+    if (countEl && parseInt(countEl.textContent, 10) === 0 && pill.dataset.filter !== 'all') {
+      pill.dataset.empty = 'true';
+    }
+  });
+
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const filter = pill.dataset.filter;
+      pills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const cards = document.querySelectorAll('.filterable .post-card');
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const cat = card.dataset.category;
+        const show = filter === 'all' || cat === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      // Show/hide empty-state messages for known empty categories
+      document.querySelectorAll('.filter-empty').forEach((el) => {
+        const targetFilter = el.dataset.emptyFor;
+        el.hidden = !(filter === targetFilter && visibleCount === 0);
+      });
+    });
+  });
+}
 
 // Lazy-load html2canvas only when needed (saves bandwidth on first page load)
 function ensureHtml2Canvas() {
