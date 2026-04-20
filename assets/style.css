@@ -587,46 +587,26 @@ p { margin: 0 0 16px; }
   padding: 10px 16px;
 }
 
-/* ----- Install CTA (homepage hero) ------------------------------------- */
-.install-cta {
-  margin-top: 28px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 24px;
-  background: var(--ink);
-  color: var(--paper);
-  border: none;
-  border-radius: 100px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+/* ----- Install CTA (reuses .btn.btn--primary.btn--lg) ----------------- */
+.install-row {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-start;
 }
-.install-cta:hover {
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-.install-cta__icon {
+.btn__prefix {
   font-size: 18px;
   line-height: 1;
   display: inline-block;
   transform: translateY(-1px);
+  margin-right: 2px;
 }
-.install-cta__hint {
+.install-hint {
   display: block;
-  margin-top: 10px;
+  margin-top: 14px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.05em;
   color: var(--muted);
-  text-transform: none;
 }
 
 /* Footer install link */
@@ -638,8 +618,8 @@ p { margin: 0 0 16px; }
 .install-footer-link::before { content: '↓'; }
 
 /* Hide install triggers once installed */
-body.pwa-installed .install-cta,
-body.pwa-installed .install-cta__hint,
+body.pwa-installed .install-row,
+body.pwa-installed .install-hint,
 body.pwa-installed .install-footer-link {
   display: none !important;
 }
