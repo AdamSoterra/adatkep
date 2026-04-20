@@ -587,6 +587,162 @@ p { margin: 0 0 16px; }
   padding: 10px 16px;
 }
 
+/* ----- Install CTA (homepage hero) ------------------------------------- */
+.install-cta {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.install-cta:hover {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.install-cta__icon {
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.install-cta__hint {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-transform: none;
+}
+
+/* Footer install link */
+.install-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.install-footer-link::before { content: '↓'; }
+
+/* Hide install triggers once installed */
+body.pwa-installed .install-cta,
+body.pwa-installed .install-cta__hint,
+body.pwa-installed .install-footer-link {
+  display: none !important;
+}
+
+/* ----- Install modal --------------------------------------------------- */
+.install-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.install-modal.open { display: flex; }
+.install-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 26, 36, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.install-modal__card {
+  position: relative;
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  padding: 32px 28px 28px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(14, 26, 36, 0.35);
+  animation: install-pop 0.18s ease-out;
+}
+@keyframes install-pop {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.install-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+}
+.install-modal__close:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.install-modal__brand { margin-bottom: 12px; }
+.install-modal h3 {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+.install-modal__lede {
+  color: var(--muted);
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.install-modal__platform[hidden] { display: none; }
+.install-modal__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.install-modal__step:first-child { border-top: none; padding-top: 4px; }
+.install-modal__step strong { color: var(--ink); font-weight: 600; }
+.install-modal__num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.install-modal__foot {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
 /* ----- Responsive ------------------------------------------------------ */
 @media (max-width: 720px) {
   .container { padding: 0 20px; }
