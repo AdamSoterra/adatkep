@@ -25,7 +25,7 @@
     <div class="site-header__inner">
       <a href="/" class="wordmark wordmark--md">adat<span class="accent">kép</span></a>
       <nav class="nav">
-        <a href="/">Adatképek</a>
+        <a href="/archivum.html">Adatképek</a>
         <a href="/rolunk.html">Rólunk</a>
       </nav>
     </div>
@@ -45,38 +45,41 @@
         miközben a 60 év feletti orvosok aránya tovább nő.
       </p>
 
-      <div class="chart">
-        <div class="chart__head">
-          <div>
-            <div class="chart__title">Háziorvosok száma Magyarországon</div>
-            <div class="chart__sub">2010–2025 · fő · idősor</div>
+      <div class="chart-wrap">
+        <div class="chart">
+          <div class="chart__head">
+            <div>
+              <div class="chart__title">Háziorvosok száma Magyarországon</div>
+              <div class="chart__sub">2010–2025 · fő · idősor</div>
+            </div>
+            <div class="chart__tag">Bar</div>
           </div>
-          <div class="chart__tag">Bar</div>
+          <div class="bar-row">
+            <div class="bar-label">2010</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+            <div class="bar-val">6 724</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2015</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 88%;"></div></div>
+            <div class="bar-val">5 917</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2020</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 76%;"></div></div>
+            <div class="bar-val">5 110</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2025</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 69%;"></div></div>
+            <div class="bar-val">4 634</div>
+          </div>
+          <div class="chart__source">
+            <span>Forrás · KSH (2025)</span>
+            <span>adatkep.hu</span>
+          </div>
         </div>
-        <div class="bar-row">
-          <div class="bar-label">2010</div>
-          <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
-          <div class="bar-val">6 724</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">2015</div>
-          <div class="bar-track"><div class="bar-fill" style="width: 88%;"></div></div>
-          <div class="bar-val">5 917</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">2020</div>
-          <div class="bar-track"><div class="bar-fill" style="width: 76%;"></div></div>
-          <div class="bar-val">5 110</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label">2025</div>
-          <div class="bar-track"><div class="bar-fill" style="width: 69%;"></div></div>
-          <div class="bar-val">4 634</div>
-        </div>
-        <div class="chart__source">
-          <span>Forrás · KSH (2025)</span>
-          <span>adatkep.hu</span>
-        </div>
+        <button class="download-btn" data-download-chart="adatkep-haziorvosok.png">Letöltés képként</button>
       </div>
 
       <h2>Mit látunk?</h2>
